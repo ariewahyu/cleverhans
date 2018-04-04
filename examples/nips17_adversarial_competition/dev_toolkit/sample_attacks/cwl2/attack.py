@@ -219,7 +219,7 @@ def main(_):
   # Renormalizing epsilon from [0, 255] to [0, 2].
   print('this line #1')
   eps = 2.0 * FLAGS.max_epsilon / 255.0
-  slim_model = False
+  slim_model = False        # For AlexNet and SqueezeNet: False, For Inception and MobileNet: True
   batch_shape = [FLAGS.batch_size, FLAGS.image_height, FLAGS.image_width, 3]
   num_classes = 1001
 
