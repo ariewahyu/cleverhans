@@ -195,3 +195,13 @@ The following authors contributed 100 lines or more (ordered according to the Gi
 ## Copyright
 
 Copyright 2017 - Google Inc., OpenAI and Pennsylvania State University.
+
+
+## Arie's Note (For generating adversarial images experiment (blackbox and whitebox attack))
+1. To generate adversarial images using Inception and MobileNets model in Cleverhans is easy.
+Run the following code:
+  cleverhans/examples/nips17_adversarial_competition/dev_toolkit/sample_attacks/cwl2/attack.py
+
+To use other models which caffe-based (AlexNet, SqueezeNet, etc), we need Ethereon library (https://github.com/ethereon/caffe-tensorflow) to define the model in "attack.py" 
+
+2. Prepare the checkpoint file of each model (.npy or .ckpt is acceptable). Pretrained caffe-based model can be obtained by converting their weights (.caffemodel) into TF weights file (.npy or .ckpt) using Ethereon library (https://github.com/ethereon/caffe-tensorflow)  
